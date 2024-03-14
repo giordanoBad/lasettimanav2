@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettaglio Gruppo</title>
+</head>
+<body>
+    <h1>Dettaglio Gruppo</h1>
+    <p>Nome: {{ gruppo.nome }}</p>
+    <p>Cognome: {{ gruppo.cognome }}</p>
+    <p>Numero di telefono: {{ gruppo.numero_telefono }}</p>
+    <p>Data di arrivo: {{ gruppo.data_arrivo }}</p>
+    <p>Data di partenza: {{ gruppo.data_partenza }}</p>
+    
+    <h2>Membri del Gruppo</h2>
+    <ul>
+    {% for membro in membri %}
+        <li>
+            <p>Nome: {{ membro.nome }}</p>
+            <p>Cognome: {{ membro.cognome }}</p>
+            <p>Numero di telefono: {{ membro.numero_telefono }}</p>
+            <p>Data di arrivo: {{ membro.data_arrivo }}</p>
+            <p>Data di partenza: {{ membro.data_partenza }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

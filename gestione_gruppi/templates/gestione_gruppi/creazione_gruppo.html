@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    {{ gruppo_form.as_p }}
+    {{ membro_gruppo_formset.management_form }}
+    {% for form in membro_gruppo_formset %}
+        {{ form.as_p }}
+    {% endfor %}
+    <button type="submit">Salva</button>
+</form>
